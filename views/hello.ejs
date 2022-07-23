@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ../partial/head.ejs %>
+<body>
+<%- include ../partial/navbar.ejs %>
+    <div>   
+            <a href="/">
+            <button action="/" class="btn btn-outline-info shadow m-3">
+                back to home
+            </button>
+            </a>
+        
+    </div>
+    <% for(let i = 0; i < dbLink.length; i++) { %>
+        <div class="shadow card p-3 m-4 d-inline-flex text-center" style="width: 18rem;">
+            <div class="card-body p-1">
+              <p>copy it: </p>
+              <p id="<%= i %>"><%= value[i] %></p>
+              <button onclick="copyToClipboard(`<%= i %>`)" class="btn btn-outline-primary">Copy</button>
+            </div>
+          </div>
+    <% } %>
+    <script>
+        function copyToClipboard(i) {
+            var copyText = document.getElementById(i).innerText;
+            navigator.clipboard.writeText(copyText).then(() => {
+                alert("Copied to clipboard");
+            });
+        }
+   
+      </script>
+
+</body>
+</html>
