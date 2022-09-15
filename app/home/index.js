@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-const dbLink = []
+let dbLink = []
 
 router.post('/', function(req, res, next) {
   const { name , link } = req.query;
@@ -49,7 +49,7 @@ router.post('/hello', function(req, res, next) {
     console.log(dbMap)
   })
 
-  router.delete('/', function(req, res) {
+  router.delete('/hello', function(req, res) {
     
       dbLink=[]
       res.redirect('/')
