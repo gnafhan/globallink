@@ -56,6 +56,10 @@ router.post('/hello', function(req, res, next) {
     
   })
 
+  router.get('/RLC', function(req, res, next) {
+    res.redirect('https://www.canva.com/design/DAFO7138pRc/M4vl7mPqfaGuRW8RZJVe8A/view?utm_content=DAFO7138pRc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink')
+  })
+
 
   module.exports = router;
   
