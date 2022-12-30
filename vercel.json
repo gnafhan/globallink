@@ -1,5 +1,8 @@
 {
   "routes": [
     { "src": "/(.*)", "dest": "./bin/www" }
-  ]
+  ],
+  "build": {
+    "command": "node ./bin/www"
+  }
 }
