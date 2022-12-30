@@ -3,6 +3,6 @@
     { "src": "/(.*)", "dest": "./bin/www" }
   ],
   "build": {
-    "command": "node ./bin/www"
+    "entrypoint": "./bin/www"
   }
 }
