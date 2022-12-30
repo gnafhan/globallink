@@ -2,7 +2,10 @@
   "routes": [
     { "src": "/(.*)", "dest": "./bin/www" }
   ],
-  "build": {
-    "entrypoint": "./bin/www"
-  }
+  "build": [
+    { 
+      "src": "./bin/www",
+      "use": "@vercel/node"
+    }
+  ]
 }
