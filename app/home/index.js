@@ -56,6 +56,10 @@ router.post('/hello', function(req, res, next) {
     
   })
 
+  router.get('/TO5', function(req, res){
+    res.redirect("https://drive.google.com/file/d/1aVOD2C4p50dM2GAJK5Z4NEDIEnUFvOgq/view?usp=sharing")
+  })
+
 
   module.exports = router;
   
